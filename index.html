@@ -1,1 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Enemy: Dawoud & Suleman (2026 Geopolitical Archive)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0d0a07;
+            color: #e5d5c0;
+            background-image: radial-gradient(circle at 50% 0%, #2a1b12 0%, #0d0a07 75%);
+            background-attachment: fixed;
+        }
+
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+
+        .wood-card {
+            background: linear-gradient(145deg, #1e150f 0%, #140d09 100%);
+            border: 1px solid #3d281a;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7);
+        }
+
+        .wood-card:hover {
+            border-color: #8c5a38;
+            box-shadow: 0 15px 35px -5px rgba(140, 90, 56, 0.25);
+        }
+
+        .gold-border {
+            border-color: #a67c52;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #f3e5ab 0%, #c69c6d 50%, #8c5a38 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0d0a07;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2a1b12;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3d281a;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-amber-900 selection:text-amber-100">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 border-b border-[#2a1b12] bg-[#0d0a07]/90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="p-2.5 rounded-lg bg-[#1e150f] border border-[#3d281a]">
+                    <i data-lucide="shield-alert" class="w-6 h-6 text-amber-500"></i>
+                </div>
+                <div>
+                    <h1 class="font-cinzel text-xl font-bold tracking-wide gold-gradient-text">ARCHIVE 2026</h1>
+                    <p class="text-xs text-amber-600/80 font-medium">Dawoud, Suleman & Modern Conflict Matrix</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <button onclick="filterCards('all')" class="hover:text-amber-400 transition-colors">All Entities</button>
+                <button onclick="filterCards('ancient')" class="hover:text-amber-400 transition-colors">Ancient Era (Dawoud/Suleman)</button>
+                <button onclick="filterCards('modern')" class="hover:text-amber-400 transition-colors">Modern Era (2026 Matrix)</button>
+            </nav>
+
+            <div class="relative w-48 sm:w-64">
+                <i data-lucide="search" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-amber-600"></i>
+                <input type="text" id="searchInput" oninput="handleSearch()" placeholder="Search adversary, place, year..." 
+                    class="w-full pl-9 pr-4 py-1.5 text-xs bg-[#140d09] border border-[#3d281a] rounded-md text-amber-100 placeholder-amber-700 focus:outline-none focus:border-amber-600 transition-colors">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        
+        <!-- Hero Section -->
+        <section class="wood-card rounded-2xl p-8 mb-12 relative overflow-hidden">
+            <div class="absolute right-0 top-0 translate-x-12 -translate-y-12 w-96 h-96 bg-amber-900/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="max-w-3xl">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-950/60 text-amber-400 border border-amber-900/40 mb-4">
+                    <i data-lucide="history" class="w-3.5 h-3.5"></i> Historical & Modern Geopolitical Analysis
+                </span>
+                <h2 class="font-cinzel text-3xl sm:text-4xl font-bold gold-gradient-text mb-4">
+                    The Adversaries of Israel: From Dawoud & Suleman to 2026
+                </h2>
+                <p class="text-sm text-amber-200/80 leading-relaxed mb-6">
+                    Examine the historical trajectory of regional conflicts surrounding the land of Israel. From the biblical period of Prophet Dawoud (King David) and Prophet Suleman (King Solomon) fighting ancient rivals like Goliath and the Philistines, to modern state and non-state adversaries within the Middle Eastern geopolitical theatre.
+                </p>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center pt-4 border-t border-[#2a1b12]">
+                    <div class="p-3 rounded-lg bg-[#140d09]/60 border border-[#2a1b12]">
+                        <div class="font-cinzel text-xl font-bold text-amber-400">c. 1000 BCE</div>
+                        <div class="text-[11px] text-amber-600">Dawoud Dynasty Era</div>
+                    </div>
+                    <div class="p-3 rounded-lg bg-[#140d09]/60 border border-[#2a1b12]">
+                        <div class="font-cinzel text-xl font-bold text-amber-400">c. 970 BCE</div>
+                        <div class="text-[11px] text-amber-600">Suleman Kingdom Era</div>
+                    </div>
+                    <div class="p-3 rounded-lg bg-[#140d09]/60 border border-[#2a1b12]">
+                        <div class="font-cinzel text-xl font-bold text-amber-400">2026</div>
+                        <div class="text-[11px] text-amber-600">Modern Conflicts Matrix</div>
+                    </div>
+                    <div class="p-3 rounded-lg bg-[#140d09]/60 border border-[#2a1b12]">
+                        <div class="font-cinzel text-xl font-bold text-amber-400">6 Key Dynamic</div>
+                        <div class="text-[11px] text-amber-600">State & Non-State Vectors</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Filters -->
+        <div class="flex items-center justify-between mb-8">
+            <h3 class="font-cinzel text-xl font-bold text-amber-200 flex items-center gap-2">
+                <i data-lucide="layers" class="w-5 h-5 text-amber-500"></i> Dossier Index
+            </h3>
+            <div class="flex gap-2">
+                <button onclick="filterCards('all')" id="btn-all" class="px-3 py-1.5 rounded text-xs font-semibold bg-amber-900/40 text-amber-200 border border-amber-700/50 hover:bg-amber-800/40 transition-colors">All</button>
+                <button onclick="filterCards('ancient')" id="btn-ancient" class="px-3 py-1.5 rounded text-xs font-semibold bg-[#140d09] text-amber-500/70 border border-[#2a1b12] hover:bg-amber-900/20 transition-colors">Ancient Era</button>
+                <button onclick="filterCards('modern')" id="btn-modern" class="px-3 py-1.5 rounded text-xs font-semibold bg-[#140d09] text-amber-500/70 border border-[#2a1b12] hover:bg-amber-900/20 transition-colors">2026 Matrix</button>
+            </div>
+        </div>
+
+        <!-- Dynamic Grid -->
+        <div id="cardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cards populated dynamically via JS -->
+        </div>
+
+    </main>
+
+    <!-- Modal View Details -->
+    <div id="detailModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+        <div class="wood-card max-w-2xl w-full rounded-2xl border border-amber-800/50 overflow-hidden max-h-[90vh] flex flex-col shadow-2xl">
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-[#2a1b12] flex items-start justify-between bg-[#140d09]">
+                <div>
+                    <span id="modalCategory" class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-amber-950 text-amber-400 border border-amber-800/40">Category</span>
+                    <h3 id="modalTitle" class="font-cinzel text-2xl font-bold gold-gradient-text mt-2">Title</h3>
+                    <p id="modalSubtitle" class="text-xs text-amber-500">Subtitle / Era</p>
+                </div>
+                <button onclick="closeModal()" class="p-2 rounded-lg bg-[#1e150f] text-amber-500 hover:text-amber-200 border border-[#3d281a]">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="p-6 overflow-y-auto space-y-6 text-sm text-amber-200/90 leading-relaxed">
+                <div>
+                    <h4 class="font-cinzel font-bold text-amber-400 mb-2 flex items-center gap-2 text-xs uppercase tracking-wider">
+                        <i data-lucide="help-circle" class="w-4 h-4"></i> Who & What?
+                    </h4>
+                    <p id="modalWhoWhat" class="bg-[#140d09]/80 p-3.5 rounded-lg border border-[#2a1b12]"></p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <h4 class="font-cinzel font-bold text-amber-400 mb-2 flex items-center gap-2 text-xs uppercase tracking-wider">
+                            <i data-lucide="clock" class="w-4 h-4"></i> When?
+                        </h4>
+                        <p id="modalWhen" class="bg-[#140d09]/80 p-3 rounded-lg border border-[#2a1b12] text-xs"></p>
+                    </div>
+                    <div>
+                        <h4 class="font-cinzel font-bold text-amber-400 mb-2 flex items-center gap-2 text-xs uppercase tracking-wider">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i> Where?
+                        </h4>
+                        <p id="modalWhere" class="bg-[#140d09]/80 p-3 rounded-lg border border-[#2a1b12] text-xs"></p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-cinzel font-bold text-amber-400 mb-2 flex items-center gap-2 text-xs uppercase tracking-wider">
+                        <i data-lucide="swords" class="w-4 h-4"></i> How & Tactics?
+                    </h4>
+                    <p id="modalHow" class="bg-[#140d09]/80 p-3.5 rounded-lg border border-[#2a1b12]"></p>
+                </div>
+
+                <div>
+                    <h4 class="font-cinzel font-bold text-amber-400 mb-2 flex items-center gap-2 text-xs uppercase tracking-wider">
+                        <i data-lucide="scroll" class="w-4 h-4"></i> Historical / Geopolitical Context
+                    </h4>
+                    <p id="modalContext" class="bg-[#140d09]/80 p-3.5 rounded-lg border border-[#2a1b12] text-xs text-amber-300/80"></p>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-4 border-t border-[#2a1b12] bg-[#140d09] flex justify-end">
+                <button onclick="closeModal()" class="px-4 py-2 rounded text-xs font-semibold bg-amber-900/60 text-amber-200 border border-amber-700/50 hover:bg-amber-800/60 transition-colors">
+                    Close Dossier
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#2a1b12] bg-[#0d0a07] py-8 text-center text-xs text-amber-700">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="font-cinzel mb-2 text-amber-500">The Enemy: Dawoud & Suleman Historical Archive (2026 Platform)</p>
+            <p>Analytical platform built with responsive wood-dark theme for historical and geopolitical educational reference.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Data & Functionality -->
+    <script>
+        const archiveData = [
+            {
+                id: "goliath-philistines",
+                era: "ancient",
+                category: "Ancient Era (Dawoud)",
+                title: "Jalut (Goliath) & Philistines",
+                subtitle: "Primary Adversary of Prophet Dawoud",
+                whoWhat: "Jalut (Goliath) was the giant champion of the Philistines who challenged King Saul (Talut) and the Israelite forces in the Valley of Elah.",
+                when: "c. 1020 BCE – 1000 BCE",
+                where: "Southern Levant, Valley of Elah (Gath & Coastal Canaan)",
+                how: "Philistine heavy armor, iron weaponry, and physical intimidation. Defeated by Dawoud using faith, strategic velocity, and a stone sling.",
+                context: "The victory over Goliath established Dawoud's spiritual leadership and military renown, leading to his eventual coronation as King over Israel and the unification of Jerusalem."
+            },
+            {
+                id: "moabites-edomites",
+                era: "ancient",
+                category: "Ancient Era (Suleman / Dawoud)",
+                title: "Moabites, Edomites & Surrounding Clans",
+                subtitle: "Tribal Enemies of the United Monarchy",
+                whoWhat: "Rival kingdom states bordering the east and south of the Israelite realm during the reigns of King David and King Solomon.",
+                when: "c. 1000 BCE – 931 BCE",
+                where: "Transjordan, Negev Desert, Dead Sea regions",
+                how: "Raids, border incursions, and tactical alliances against central Israelite authority.",
+                context: "While Dawoud consolidated these borders through military campaigns, Suleman maintained stability through diplomatic marriages, fortified trade routes, and wisdom."
+            },
+            {
+                id: "iran-axis",
+                era: "modern",
+                category: "2026 Matrix (State Actor)",
+                title: "State of Iran (Axis of Resistance)",
+                subtitle: "Primary Strategic Regional State Adversary",
+                whoWhat: "The Islamic Republic of Iran, operating as the strategic center supporting a regional network opposing Israel.",
+                when: "1979 – Present (Active in 2026 conflict dynamics)",
+                where: "Tehran, Middle Eastern Theater",
+                how: "Ballistic missile capabilities, drone technologies (UAVs), and funding/arming proxy groups throughout Lebanon, Syria, Yemen, and Iraq.",
+                context: "Forms the core leadership and logistical backing of regional state and non-state alignment opposed to Israeli military actions."
+            },
+            {
+                id: "hezbollah",
+                era: "modern",
+                category: "2026 Matrix (Non-State Actor)",
+                title: "Hezbollah (Lebanon)",
+                subtitle: "Northern Border Adversary",
+                whoWhat: "Shia Islamist political party and paramilitary organization based in Lebanon.",
+                when: "1982 – Present (Active in 2025–2026 exchanges)",
+                where: "Southern Lebanon, Bekaa Valley, Beirut",
+                how: "Precision-guided missiles, anti-tank guided missiles (ATGMs), subterranean bunker networks, and artillery rockets.",
+                context: "Serves as the northern frontline vector in regional strategic deterrence and active border conflict."
+            },
+            {
+                id: "hamas-pij",
+                era: "modern",
+                category: "2026 Matrix (Non-State Actor)",
+                title: "Hamas & Palestinian Islamic Jihad",
+                subtitle: "Southern & Urban Theater Adversaries",
+                whoWhat: "Palestinian militant movements seeking armed resistance in Gaza and the West Bank.",
+                when: "1987 – Present (Major Escalation post-2023 through 2026)",
+                where: "Gaza Strip, West Bank",
+                how: "Tunnel warfare, urban ambushes, asymmetric rocket barrages, and guerrilla tactics.",
+                context: "Central focus of urban military operations and high-intensity localized conflict since October 2023."
+            },
+            {
+                id: "houthis",
+                era: "modern",
+                category: "2026 Matrix (Regional Actor)",
+                title: "Ansar Allah (Houthis - Yemen)",
+                subtitle: "Long-Range Red Sea Vector",
+                whoWhat: "Zaydi Shia movement governing northern Yemen, aligned with the Axis network.",
+                when: "2014 – Present (Long-range involvement 2023–2026)",
+                where: "Yemen, Red Sea, Gulf of Aden, Southern Israel (Eilat targeting)",
+                how: "Long-range cruise missiles, ballistic strikes, kamikaze drones, and maritime shipping blockades.",
+                context: "Expands the conflict footprint to international maritime lanes and long-range aerial defense scenarios."
+            }
+        ];
+
+        let currentFilter = 'all';
+
+        function renderCards(data) {
+            const grid = document.getElementById('cardsGrid');
+            grid.innerHTML = '';
+
+            data.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "wood-card rounded-xl p-6 flex flex-col justify-between transition-all duration-300";
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-amber-950/80 text-amber-400 border border-amber-800/40">
+                                ${item.category}
+                            </span>
+                            <span class="text-xs text-amber-600 font-mono">${item.when.split('–')[0]}</span>
+                        </div>
+                        <h4 class="font-cinzel text-xl font-bold text-amber-100 mb-1">${item.title}</h4>
+                        <p class="text-xs text-amber-500 font-medium mb-3">${item.subtitle}</p>
+                        <p class="text-xs text-amber-200/70 line-clamp-3 mb-4 leading-relaxed">${item.whoWhat}</p>
+                    </div>
+
+                    <div class="pt-4 border-t border-[#2a1b12] flex items-center justify-between">
+                        <span class="text-[11px] text-amber-600 flex items-center gap-1">
+                            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> ${item.where.split(',')[0]}
+                        </span>
+                        <button onclick="openModal('${item.id}')" class="px-3 py-1.5 rounded text-xs font-semibold bg-amber-950 text-amber-300 border border-amber-800/50 hover:bg-amber-900/50 transition-colors flex items-center gap-1">
+                            View Dossier <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            lucide.createIcons();
+        }
+
+        function filterCards(filter) {
+            currentFilter = filter;
+            
+            // Update button styles
+            ['all', 'ancient', 'modern'].forEach(f => {
+                const btn = document.getElementById(`btn-${f}`);
+                if(f === filter) {
+                    btn.className = "px-3 py-1.5 rounded text-xs font-semibold bg-amber-900/40 text-amber-200 border border-amber-700/50 hover:bg-amber-800/40 transition-colors";
+                } else {
+                    btn.className = "px-3 py-1.5 rounded text-xs font-semibold bg-[#140d09] text-amber-500/70 border border-[#2a1b12] hover:bg-amber-900/20 transition-colors";
+                }
+            });
+
+            if (filter === 'all') {
+                renderCards(archiveData);
+            } else {
+                const filtered = archiveData.filter(item => item.era === filter);
+                renderCards(filtered);
+            }
+        }
+
+        function handleSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = archiveData.filter(item => 
+                item.title.toLowerCase().includes(query) ||
+                item.subtitle.toLowerCase().includes(query) ||
+                item.whoWhat.toLowerCase().includes(query) ||
+                item.where.toLowerCase().includes(query)
+            );
+            renderCards(filtered);
+        }
+
+        function openModal(id) {
+            const item = archiveData.find(d => d.id === id);
+            if (!item) return;
+
+            document.getElementById('modalCategory').innerText = item.category;
+            document.getElementById('modalTitle').innerText = item.title;
+            document.getElementById('modalSubtitle').innerText = item.subtitle;
+            document.getElementById('modalWhoWhat').innerText = item.whoWhat;
+            document.getElementById('modalWhen').innerText = item.when;
+            document.getElementById('modalWhere').innerText = item.where;
+            document.getElementById('modalHow').innerText = item.how;
+            document.getElementById('modalContext').innerText = item.context;
+
+            document.getElementById('detailModal').classList.remove('hidden');
+            lucide.createIcons();
+        }
+
+        function closeModal() {
+            document.getElementById('detailModal').classList.add('hidden');
+        }
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCards(archiveData);
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
 
